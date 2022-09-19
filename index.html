@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <pre>
+    <h4>Q.Find the Smaller Angle</h4>
+    var Minimal_Angle = (h, m) => 
+{
+  if(h==12 && m==0)return 0
+  let ma=m*6
+  let ha=h*30 + m*0.5
+  if(ha>ma)return(ha-ma)
+  else return(ma-ha)
+};
+    <h4>Q.Check whether the year is Leap year or not.</h4>
+     
+var Check_Leap = (year) => 
+{
+ if((year%4==0)&&(year%100!=0)||(year%400==0))
+ {
+   return "Leap Year"
+ }
+  else
+  {
+    return "Non Leap Year"
+  }
+
+};
+    <h4>Q. perfect no.check</h4>
+    var Perfect_Check = (N) => 
+{
+  let total=0
+  if(N==1)
+  return "YES"
+  else{
+  for(let i = 1; i < N; i++)
+  {
+    if(N%i == 0)
+    total += i;
+  }
+  if(total==N)return "YES"
+  else return "NO"}
+};
+    <h4>Q.reverse a number</h4>
+    var Reverse_Number = (N) => 
+{
+  return Number(String(N).split("").reverse().join(""))
+};
+    <h4>Q.Substring Check.</h4>
+    var Substring_Check = (S1, S2) => 
+{
+  let s=S1.split(" ")
+  let tr
+  for(let i=0; i < s.length; i++)
+  {
+    if(s[i]==S2) tr=true
+    
+  }
+  if(tr) return "YES"
+  else return "NO"
+};
+    </pre>
+</body>
+
+</html>
